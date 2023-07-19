@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    flex-direction: column;
+}
+
+.game{
+    border: 2px solid black;
+    width: 800px;
+    height: 400px;
+    background-image: url('building1.jpg');
+    background-position: center;
+    background-size: contain;
+    margin: auto;
+    animation: animationBackground 5s infinite linear;
+}
+@keyframes animationBackground {
+    0%{
+        background-position: 100%;
+    }
+
+    90%{
+        background-position: -2500px;
+    }
+    100%{
+        background-position: -3000px;
+    }
+}
+#character{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 347px;
+}
+.character{
+    width: 50px;
+    height: 50px;
+}
+.vehicle{
+    width: 80px;
+    height: 80px;
+}
+.animate{
+    animation: jumpCharacter .3s linear;
+}
+@keyframes jumpCharacter {
+    0%{
+        top: 150px;
+    }
+    30%{
+        top: 100px;
+    }
+    70%{
+        top: 100px;
+    }
+    100%{
+        top: 150px;
+    }
+}
+#block{
+    height: 80px;
+    width: 80px;
+    position: relative;
+    top: 270px; 
+    left: 768px;
+    animation: animationBlock 1s infinite linear;
+}
+@keyframes animationBlock {
+    0%{
+        left: 800px;
+    }
+
+    100%{
+        left: -50px;
+    }
+}
+p{
+    margin-top: 0;
+    color: #fff;
+}
